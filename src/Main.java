@@ -1,9 +1,8 @@
 import Epreuve.*;
+import Epreuve.Jeu.Dames;
+import Epreuve.Jeu.Mastermind;
 import Personne.*;
 import Temps.*;
-import Argent.*;
-import Lire.*;
-
 
 
 // Classe principale du tournoi
@@ -14,7 +13,7 @@ public class Main {
             Epreuve epreuveJeuVideo = new EpreuveJeuVideo("Épreuve de Mario Kart", 3000, "Nintendo Switch");
             Epreuve epreuveDames = new Dames("Rencontre mensuel", 4000, "Dames", 2);
             Epreuve epreuveMastermind = new Mastermind("Épreuve avec invitation", 5000, "Mastermind", 2);
-            //Epreuve epreuveLegendes = new Legendes("Épreuve ouverte", 4000, "Légendes", 2);
+            //Epreuve epreuveLegendes = new Leg endes("Épreuve ouverte", 4000, "Légendes", 2);
             Tournoi tournoi = new Tournoi(); // Temps.Calendrier d'épreuves dans un HashTable, donc pas d'ordre
             tournoi.ajouterEpreuve(epreuveJeuDeSociete, new CaseHoraire(Jour.LUNDI,20));
             tournoi.ajouterEpreuve(epreuveJeuDeRole, new CaseHoraire(Jour.MARDI,19));

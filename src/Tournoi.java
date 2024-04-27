@@ -6,6 +6,10 @@ import Personne.Participant;
 import Personne.Provenance;
 import Temps.Calendrier;
 import Temps.CaseHoraire;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import Epreuve.*;
 
 // Classe représentant un tournoi de jeux
 public class Tournoi {

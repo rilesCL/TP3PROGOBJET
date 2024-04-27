@@ -1,4 +1,4 @@
-package Epreuve;
+package Epreuve.Jeu;
 
 public class Piece {
 
@@ -16,6 +16,28 @@ public class Piece {
         corrigerPosition();
     }
 
+    public char getXpos () {
+
+        return xPos;
+    }
+
+    public void deplace (int xF, int yF) {
+        xPos = (char) (xPos + xF);
+        yPos = yPos + yF;
+        // corriger si c'est erroné
+        corrigerPosition();
+    }
+
+    public int getYpos () {
+
+        return yPos;
+    }
+
+    public String toString() {
+
+        return "Pièce à la position " + xPos + yPos;
+    }
+
     /** Corriger la position */
     private void corrigerPosition () {
         if (xPos < 'A')
@@ -28,27 +50,5 @@ public class Piece {
             yPos = 8;
     }
 
-    public char getXpos () {
 
-        return xPos;
-    }
-
-
-    public int getYpos () {
-
-        return yPos;
-    }
-
-    public void deplace (int xF, int yF) {
-        xPos = (char) (xPos + xF);
-        yPos = yPos + yF;
-        // corriger si c'est erroné
-        corrigerPosition();
-    }
-
-
-    public String toString() {
-
-        return "Pièce à la position " + xPos + yPos;
-    }
 }

@@ -1,4 +1,4 @@
-package Epreuve;
+package Epreuve.Jeu;
 
 public class Pion extends Piece {
 

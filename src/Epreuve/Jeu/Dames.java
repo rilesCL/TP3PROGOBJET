@@ -1,6 +1,6 @@
-package Epreuve;
+package Epreuve.Jeu;
 
-import Epreuve.Damier;
+import Epreuve.EpreuveJeuDeSociete;
 import Lire.Keyboard;
 import Personne.Participant;
 

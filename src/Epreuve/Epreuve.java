@@ -1,7 +1,9 @@
 package Epreuve;
 
+import java.util.ArrayList;
 import Personne.Arbitre;
 import Personne.Participant;
+
 
 // Classe abstraite représentant une épreuve du tournoi
 public abstract class Epreuve {

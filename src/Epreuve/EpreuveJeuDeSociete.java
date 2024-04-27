@@ -2,6 +2,7 @@ package Epreuve;
 
 import Personne.Participant;
 
+
 // Classe représentant une épreuve de jeu de société
 public class EpreuveJeuDeSociete extends Epreuve {
     protected String jeu;

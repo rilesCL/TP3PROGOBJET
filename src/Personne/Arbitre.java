@@ -1,4 +1,5 @@
 package Personne;
+import Epreuve.*;
 
 public class Arbitre {
     private String nom;
