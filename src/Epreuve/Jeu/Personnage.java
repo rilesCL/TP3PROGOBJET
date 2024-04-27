@@ -15,6 +15,9 @@ public class Personnage {
         cible.subirDegats(force);
     }
     public void subirDegats(int degats){
-        t
+        pointsDeVie -= degats;
+        if(pointsDeVie <= 0){
+            pointsDeVie = 0;
+        }
     }
 }
