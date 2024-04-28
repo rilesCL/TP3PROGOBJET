@@ -30,7 +30,7 @@ public abstract class Epreuve {
         this.maxParticipants= maxParticipants;
     }
 
-    public void ajouteParticipant(Participant p) {
+    public void ajouteParticipant(Participant p) throws  {
         if (participants.size() < maxParticipants)
             participants.add(p);
         else

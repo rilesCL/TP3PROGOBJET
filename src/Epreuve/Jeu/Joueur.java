@@ -12,7 +12,7 @@ public class Joueur extends Personnage{
         this.inventaire = new ArrayList<Objet>();
     }
 
-    public void gagnerExperienceint(int quantite){
+    public void gagnerExperience(int quantite){
         this.experience += quantite;
     }
     public void ajouterObjet(Objet objet) {

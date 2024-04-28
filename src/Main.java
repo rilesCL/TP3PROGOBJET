@@ -1,5 +1,6 @@
 import Epreuve.*;
 import Epreuve.Jeu.Dames;
+import Epreuve.Jeu.Legendes;
 import Epreuve.Jeu.Mastermind;
 import Personne.*;
 import Temps.*;
@@ -13,14 +14,14 @@ public class Main {
             Epreuve epreuveJeuVideo = new EpreuveJeuVideo("Épreuve de Mario Kart", 3000, "Nintendo Switch");
             Epreuve epreuveDames = new Dames("Rencontre mensuel", 4000, "Dames", 2);
             Epreuve epreuveMastermind = new Mastermind("Épreuve avec invitation", 5000, "Mastermind", 2);
-            //Epreuve epreuveLegendes = new Leg endes("Épreuve ouverte", 4000, "Légendes", 2);
+            Epreuve epreuveLegendes = new Legendes("Épreuve ouverte", 4000, "Légendes", 2);
             Tournoi tournoi = new Tournoi(); // Temps.Calendrier d'épreuves dans un HashTable, donc pas d'ordre
             tournoi.ajouterEpreuve(epreuveJeuDeSociete, new CaseHoraire(Jour.LUNDI,20));
             tournoi.ajouterEpreuve(epreuveJeuDeRole, new CaseHoraire(Jour.MARDI,19));
             tournoi.ajouterEpreuve(epreuveJeuVideo, new CaseHoraire(Jour.MERCREDI,21));
             tournoi.ajouterEpreuve(epreuveDames, new CaseHoraire(Jour.SAMEDI,13));
             tournoi.ajouterEpreuve(epreuveMastermind, new CaseHoraire(Jour.SAMEDI,15));
-            //tournoi.ajouterEpreuve(epreuveLegendes, new Temps.CaseHoraire(Temps.Jour.LUNDI,15));
+            tournoi.ajouterEpreuve(epreuveLegendes, new Temps.CaseHoraire(Temps.Jour.LUNDI,15));
             // Inscription des participants:
             Participant alice = new Participant("Ricardo", Provenance.EUROPE);
             Participant ricardo = new Participant("Alice", Provenance.CANADA);
@@ -34,7 +35,7 @@ public class Main {
             james.sInscrireEpreuve(epreuveJeuVideo);
             tina.sInscrireEpreuve(epreuveDames);
             rene.sInscrireEpreuve(epreuveMastermind);
-            //megan.sInscrireEpreuve(epreuveLegendes);
+            megan.sInscrireEpreuve(epreuveLegendes);
             // Supervision de l'épreuve par un arbitre
             Arbitre carole = new Arbitre("Carole"); // Dans Epreuve: liste d'arbitres
             carole.superviserEpreuve(epreuveJeuDeSociete);
@@ -45,7 +46,7 @@ public class Main {
             pierre.superviserEpreuve(epreuveDames);
             Arbitre lina = new Arbitre("Lina");
             lina.superviserEpreuve(epreuveMastermind);
-            //lina.superviserEpreuve(epreuveLegendes);
+            lina.superviserEpreuve(epreuveLegendes);
             System.out.println(tournoi);
             tournoi.demarrerTournoi();
     }

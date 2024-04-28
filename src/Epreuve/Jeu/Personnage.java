@@ -20,4 +20,8 @@ public class Personnage {
             pointsDeVie = 0;
         }
     }
+
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
 }
