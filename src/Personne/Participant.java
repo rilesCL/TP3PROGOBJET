@@ -1,5 +1,6 @@
 package Personne;
 import Epreuve.*;
+import Exception.AjoutParticipantException;
 
 public class Participant {
     private String nom;
@@ -21,7 +22,11 @@ public class Participant {
     }
 
     public void sInscrireEpreuve(Epreuve epreuve) {
-        epreuve.ajouteParticipant(this);
+        try {
+            epreuve.ajouteParticipant(this);
+        } catch (AjoutParticipantException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

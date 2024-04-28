@@ -3,6 +3,7 @@ package Epreuve.Jeu;
 import Epreuve.EpreuveJeuDeSociete;
 import Lire.Keyboard;
 import Personne.Participant;
+import Exception.DeplacePionException;
 
 import java.util.Random;
 
@@ -44,7 +45,11 @@ public class Dames extends EpreuveJeuDeSociete {
                 System.out.print( "Entrez le nombre de cases du déplacement: " + str );
                 deplacement = Keyboard.readInt();
 
-                pion.deplace(direction, deplacement);
+               try{
+                   pion.deplace(direction, deplacement);
+               }catch (DeplacePionException e){
+                   System.out.println(e.getMessage());
+               }
 
                 if (pion.capture(cible)) {
                     System.out.println("Vous avez atteint la cible. Bravo!");

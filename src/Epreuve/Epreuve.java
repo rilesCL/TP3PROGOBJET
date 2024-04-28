@@ -3,6 +3,7 @@ package Epreuve;
 import java.util.ArrayList;
 import Personne.Arbitre;
 import Personne.Participant;
+import Exception.AjoutParticipantException;
 
 
 // Classe abstraite représentant une épreuve du tournoi
@@ -30,11 +31,11 @@ public abstract class Epreuve {
         this.maxParticipants= maxParticipants;
     }
 
-    public void ajouteParticipant(Participant p) throws  {
+    public void ajouteParticipant(Participant p) throws AjoutParticipantException {
         if (participants.size() < maxParticipants)
             participants.add(p);
         else
-            System.out.println("Nombre maximum de participants atteints.");
+           throw new AjoutParticipantException("Nombre maximum de participants atteints.");
     }
 
 

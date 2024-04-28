@@ -1,5 +1,6 @@
 package Epreuve.Jeu;
 
+import Exception.DeplacePionException;
 public class Pion extends Piece {
 
     public Pion(char x, int y) {
@@ -7,7 +8,7 @@ public class Pion extends Piece {
         super( x, y);
     }
 
-    public void deplace (char direction, int deplacement)
+    public void deplace (char direction, int deplacement) throws DeplacePionException
     {
         switch (direction) {
 
@@ -28,7 +29,7 @@ public class Pion extends Piece {
                 break;
 
             default:
-                System.out.println( "Déplacement illégal!" );
+                throw new DeplacePionException( "Déplacement illégal!" );
 
         }
 

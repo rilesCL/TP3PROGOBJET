@@ -1,4 +1,7 @@
 package Exception;
 
-public class AjoutParticipantException {
+public class AjoutParticipantException extends Exception {
+    public AjoutParticipantException(String message){
+        super(message);
+    }
 }
