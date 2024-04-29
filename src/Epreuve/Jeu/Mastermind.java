@@ -12,7 +12,8 @@ public class Mastermind extends EpreuveJeuDeSociete {
         super(nom, bourse, jeu, maxParticipants);
     }
     @Override
-    public boolean jouer(Participant participant) {
+    public boolean jouer(Participant participant)
+    {
         char point_noir = '\u2022'; // Bien placé
         char point_blanc = '\u25CB'; // Mal placé
         char epee = 'E'; // Épée
