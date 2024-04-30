@@ -4,10 +4,23 @@ import Epreuve.EpreuveJeuDeRole;
 import Personne.Participant;
 
 public class Legendes extends EpreuveJeuDeRole {
+    /**
+     * Construit une épreuve du type légendes avec les paramètres spécifiés.
+     *
+     * @param nom             Le nom de l'épreuve.
+     * @param bourse          La bourse en jeu pour l'épreuve.
+     * @param jeu             Le nom du jeu associé à l'épreuve.
+     * @param maxParticipants Le nombre maximum de participants pour cette épreuve.
+     */
     public Legendes(String nom, double bourse, String jeu, int maxParticipants) {
         super(nom, bourse, jeu, maxParticipants);
     }
-
+    /**
+     * Fait jouer l'épreuve de légendes au participant.
+     *
+     * @param participant Le participant qui joue l'épreuve.
+     * @return Vrai si le participant gagne, faux autrement.
+     */
     public boolean jouer(Participant participant){
         boolean gain = false;
        Joueur joueur = new Joueur(participant.getNom(),100, 25);

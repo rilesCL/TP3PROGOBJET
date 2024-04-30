@@ -10,9 +10,23 @@ import java.util.Random;
 // Classe spécifique pour le jeu de Dames
 public class Dames extends EpreuveJeuDeSociete {
     // Méthodes et attributs spécifiques au jeu de Dames
+    /**
+     * Construit une nouvelle instance de Dames.
+     *
+     * @param nom Le nom de l'épreuve.
+     * @param bourse La bourse en jeu.
+     * @param jeu Le nom du jeu.
+     * @param maxParticipants Le nombre maximum de participants.
+     */
     public Dames(String nom, double bourse, String jeu, int maxParticipants)  {
         super(nom, bourse, jeu, maxParticipants);
     }
+    /**
+     * Joue une partie du jeu de Dames avec le participant.
+     *
+     * @param participant Le participant qui joue le jeu.
+     * @return Vrai si le participant gagne, faux sinon.
+     */
     @Override
     public boolean jouer(Participant participant) {
 

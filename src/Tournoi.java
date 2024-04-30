@@ -14,12 +14,26 @@ import Epreuve.*;
 // Classe représentant un tournoi de jeux
 public class Tournoi {
     private Calendrier calendrier;
+    /**
+     * Construit un nouveau tournoi avec un calendrier vide.
+     */
+
     public Tournoi() {
         calendrier = new Calendrier();
     }
+    /**
+     * Ajoute une épreuve à un horaire spécifique dans le calendrier du tournoi.
+     *
+     * @param epreuve L'épreuve à ajouter au tournoi.
+     * @param caseHoraire L'horaire auquel l'épreuve doit être placée.
+     */
     public void ajouterEpreuve(Epreuve epreuve, CaseHoraire caseHoraire) {
         calendrier.entrerEpreuve(epreuve, caseHoraire);
     }
+    /**
+     * Démarre le tournoi et exécute toutes les épreuves dans l'ordre chronologique.
+     * Affiche les résultats et les détails des épreuves au fur et à mesure de leur exécution.
+     */
     public void demarrerTournoi() {
         List<CaseHoraire> cles = new ArrayList<>(calendrier.getEpreuves().keySet());
         Collections.sort(cles);
@@ -52,6 +66,11 @@ public class Tournoi {
             }
         }
     }
+    /**
+     * Retourne une représentation textuelle du calendrier du tournoi.
+     *
+     * @return Une chaîne de caractères représentant le calendrier du tournoi.
+     */
     public String toString() {
         return calendrier.toString();
     }
