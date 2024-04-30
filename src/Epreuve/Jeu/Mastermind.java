@@ -6,9 +6,23 @@ import Personne.*;
 
 public class Mastermind extends EpreuveJeuDeSociete {
     // Méthodes et attributs spécifiques au jeu de Dames
+    /**
+     * Construit une épreuve Mastermind avec les paramètres spécifiés.
+     *
+     * @param nom             Le nom de l'épreuve.
+     * @param bourse          La bourse en jeu pour l'épreuve.
+     * @param jeu             Le nom du jeu associé à l'épreuve.
+     * @param maxParticipants Le nombre maximum de participants pour cette épreuve.
+     */
     public Mastermind(String nom, double bourse, String jeu, int maxParticipants)  {
         super(nom, bourse, jeu, maxParticipants);
     }
+    /**
+     * Fait jouer le jeu de Mastermind au participant.
+     *
+     * @param participant Le participant qui joue le jeu.
+     * @return Vrai si le participant devine correctement le code, faux autrement.
+     */
     @Override
     public boolean jouer(Participant participant) {
         char point_noir = '\u2022'; // Bien placé
