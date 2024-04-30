@@ -8,7 +8,7 @@ public class CaseHoraire implements Comparable<CaseHoraire>{
     public CaseHoraire(Jour jour, int heure) {
         this.heure = heure;
         this.jour = jour;
-    }dsf
+    }
 
     @Override
     public int compareTo(CaseHoraire caseHoraire)
